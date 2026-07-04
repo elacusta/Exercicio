@@ -36,10 +36,10 @@ jobs:
             platforms;android-34
             tools
 
-      - name: Install Gradle
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y gradle
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 8.2.1
 
       - name: Build debug APK
         run: gradle :app:assembleDebug
