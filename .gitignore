@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+/build/
+**/build/
+
+# Local configuration
+local.properties
+
+# Log files
+*.log
+
+# Android Studio
+.idea/
+*.iml
+
+# Generated files
+.gradle/
+*/build/
+
+# Kotlin
+*.kotlin_module
+
+# Github Actions
+!.github/workflows/
+!.github/workflows/android-build.yml
