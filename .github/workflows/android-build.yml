@@ -13,6 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+      ANDROID_HOME: /usr/local/lib/android/sdk
 
     steps:
       - name: Checkout repository
@@ -32,7 +35,6 @@ jobs:
 
       - name: Install SDK packages with sdkmanager
         run: |
-          export ANDROID_SDK_ROOT=/usr/local/lib/android/sdk
           /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --sdk_root=${ANDROID_SDK_ROOT} "platform-tools" "platforms;android-34" "build-tools;34.0.0"
         shell: bash
 
